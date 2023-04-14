@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and font styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: white;
+}
+
+/* Style the navigation bar */
+header nav {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  max-height: 70px;
+}
+
+header nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header .logo h1 {
+  font-size: 28px;
+  color: #ffffff;
+  font: Arial, sans-serif;
+}
+
+header nav .nav-links {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+header nav .nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+header nav .nav-links a:hover {
+  color: rgb(0, 170, 255);
+}
+
+header nav .nav-links button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+header nav .nav-links button:hover {
+  background-color: #0069d9;
+}
+/* Style the main section */
+main {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 700px;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #93916c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #0051a8;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: #93916c;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+}

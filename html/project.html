@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Projects</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <h1>My Portfolio</h1>
+          </div>
+          <div class="nav-links">
+            <a href="../main.html">Home</a>
+            <a href="about.html">Know Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="containerr">
+        <div class="slider">
+          <div class="slider-content">
+            <div class="project-slide">
+              <img
+                class="project-image"
+                src="../resources/project1.png"
+                alt="Project 1"
+              />
+              <div class="project-details">
+                <h3>Farm2Home</h3>
+                <p class="tools">HTML | CSS | JS | PHP | MySQL</p>
+                <p class="decs">
+                  I led this project in my 5th semester as a part of my Software
+                  engineering project component. This project was a unique idea
+                  where we intended for farmers and consumers to connect
+                  digitally without the involvement of middleman. The project
+                  provided valuable experience in project management, web
+                  development, and ecommerce.
+                </p>
+              </div>
+            </div>
+            <div class="project-slide">
+              <img
+                class="project-image"
+                src="../resources/project2.png"
+                alt="Project 2"
+              />
+              <div class="project-details">
+                <h3>Sign Language Detection</h3>
+                <p>Python | AI | ML | CNN</p>
+                <p class="decs"></p>
+              </div>
+            </div>
+            <div class="project-slide">
+              <img class="project-image" src="project3.jpg" alt="Project 3" />
+              <div class="project-details">
+                <h3>Project 3</h3>
+                <p>Description of Project 3</p>
+                <p class="decs"></p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="slider-button previous-button"
+            onclick="previousSlide()"
+          >
+            <i class="fas fa-forward fa-rotate-180 fa-lg"></i>
+          </button>
+          <button class="slider-button next-button" onclick="nextSlide()">
+            <i class="fas fa-forward fa-lg"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="../js/project.js"></script>
+</html>

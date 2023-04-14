@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <h1>My Portfolio</h1>
+          </div>
+          <div class="nav-links">
+            <a href="../main.html">Home</a>
+            <a href="about.html">Know Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form action="https://formspree.io/f/meqwpnkn" method="POST" id="form">
+        <h1>Leave me a message below!</h1>
+        <br />
+        <input type="text" id="name" name="name" required placeholder="NAME" />
+        <br />
+
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          required
+          placeholder="E-MAIL"
+        />
+        <br />
+
+        <textarea
+          id="feedback"
+          name="feedback"
+          rows="5"
+          required
+          placeholder="MESSAGE"
+        ></textarea>
+        <br />
+
+        <input type="hidden" name="_gotcha" />
+        <input type="submit" value="Send" />
+      </form>
+    </main>
+
+    <script src="../js/sanitise.js"></script>
+  </body>
+</html>
