@@ -146,3 +146,22 @@ textarea:invalid {
   margin-top: 5px;
   text-align: left;
 }
+/* Add media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  header nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  header nav .nav-links a,
+  header nav .nav-links button {
+    display: block;
+    margin: 10px 0;
+  }
+}
