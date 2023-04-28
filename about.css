@@ -166,25 +166,40 @@ main h1 a {
   margin: 30px auto;
 }
 
+/* Add media query for smaller screens */
 @media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+
   header nav .container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  header nav .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 10px;
+  header .logo h1 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
   }
 
   header nav .nav-links a,
   header nav .nav-links button {
-    display: block;
-    margin: 10px 0;
+    font-size: 14px; /* Adjust the font size for smaller screens */
   }
 
-  header nav .nav-links a {
-    font-size: 14px; /* Add the desired font size for smaller screens */
+  section {
+    width: 100%; /* Adjust the width to occupy full width on smaller screens */
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  section h2 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+
+  section p {
+    font-size: 18px; /* Adjust the font size for smaller screens */
+  }
+
+  main h1 a {
+    font-size: 28px; /* Adjust the font size for smaller screens */
   }
 }
