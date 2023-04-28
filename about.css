@@ -165,7 +165,7 @@ main h1 a {
   max-width: 800px;
   margin: 30px auto;
 }
-/* Add media query for smaller screens */
+
 @media only screen and (max-width: 600px) {
   header nav .container {
     flex-direction: column;
@@ -182,5 +182,9 @@ main h1 a {
   header nav .nav-links button {
     display: block;
     margin: 10px 0;
+  }
+
+  header nav .nav-links a {
+    font-size: 14px; /* Add the desired font size for smaller screens */
   }
 }
