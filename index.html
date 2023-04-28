@@ -38,7 +38,7 @@
         </div>
       </nav>
     </header>
-
+    <div class="moon"></div>
     <main>
       <section id="home">
         <div class="profile-pic-container">
@@ -171,5 +171,15 @@
     <footer>
       <p>&copy; 2023 My Portfolio. All rights reserved.</p>
     </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        var scrollPos = window.pageYOffset;
+        var moon = document.querySelector(".moon");
+        var newTranslateX =
+          (scrollPos / (document.body.scrollHeight - window.innerHeight)) * 400;
+        moon.style.transform =
+          "translateX(" + newTranslateX + "%) rotate(45deg)";
+      });
+    </script>
   </body>
 </html>
