@@ -7,7 +7,7 @@
 
 /* Set background color and font styles */
 body {
-  background: url(main.jpg) no-repeat center center fixed;
+  background: url(../resources/main.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -75,7 +75,7 @@ header nav .nav-links button:hover {
   left: 0px;
   width: 300px;
   height: 300px;
-  background-image: url("moon.png"); /* Replace 'moon.png' with your moon image */
+  background-image: url("../resources/moon.png"); /* Replace 'moon.png' with your moon image */
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;

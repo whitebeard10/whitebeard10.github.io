@@ -7,7 +7,7 @@
 
 /* Set background color and font styles */
 body {
-  background: url(book.jpg) no-repeat center center fixed;
+  background: url(../resources/book.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
   font-size: 16px;
