@@ -108,7 +108,7 @@ main {
 /* Define the style for the slider content */
 .slider-content {
   display: flex;
-  width: calc(100% * 3);
+  width: calc(100% * 5);
   height: 100%;
   transition: transform 0.5s ease-in-out;
   position: absolute;
@@ -118,7 +118,7 @@ main {
 
 /* Define the style for each project slide */
 .project-slide {
-  width: calc(100% / 3);
+  width: calc(100% / 5);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -129,7 +129,8 @@ main {
 /* Define the style for the project image */
 .project-image {
   max-width: 100%;
-  height: auto;
+  max-height: 400px;
+  object-fit: contain;
 }
 
 /* Define the style for the project details */

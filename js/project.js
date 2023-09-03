@@ -7,15 +7,15 @@ function previousSlide() {
   if (currentSlide > 0) {
     currentSlide--;
     sliderContent.style.transform =
-      "translateX(-" + (currentSlide * 100) / 3 + "%)";
+      "translateX(-" + (currentSlide * 100) / 5 + "%)";
   }
 }
 
 // Define a function to move to the next slide
 function nextSlide() {
-  if (currentSlide < 2) {
+  if (currentSlide < 3) {
     currentSlide++;
     sliderContent.style.transform =
-      "translateX(-" + (currentSlide * 100) / 3 + "%)";
+      "translateX(-" + (currentSlide * 100) / 5 + "%)";
   }
 }
