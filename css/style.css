@@ -89,9 +89,9 @@ header nav .nav-links button:hover {
   align-items: center;
   width: 300px; /* adjust the width as needed */
   height: 300px; /* adjust the height as needed */
-  border: 10px solid rgb(255, 0, 0);
+  /*border: 10px solid rgb(255, 0, 0);*/
   border-radius: 50%;
-  animation: rgb-border 1.5s infinite;
+  /*animation: rgb-border 1.5s infinite;*/
   padding-top: 17px;
   margin: auto;
   transform-origin: center;
@@ -103,11 +103,11 @@ header nav .nav-links button:hover {
   object-fit: none;
   border-radius: 200px;
   filter: blur(0px) drop-shadow(0px 0px 10px rgba(0, 0, 0, 3px));
-  animation: rgb-border 2s infinite;
-  box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+  /*animation: rgb-border 2s infinite;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 1);*/
 }
 
-@keyframes rgb-border {
+/*@keyframes rgb-border {
   0% {
     border-color: rgb(255, 0, 0);
     box-shadow: 0 0 30px rgba(255, 0, 0, 1);
@@ -145,7 +145,7 @@ header nav .nav-links button:hover {
     box-shadow: 0 0 30px rgba(0, 255, 0, 1);
   }
 }
-
+*/
 /* Style the main content */
 main {
   margin-top: 70px;
