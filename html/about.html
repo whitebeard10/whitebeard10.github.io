@@ -2,108 +2,305 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/about.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>About Me | Avinash Chhetri</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <title>about me</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="container">
-          <div class="logo">
-            <h1>My Portfolio</h1>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Particles background -->
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 shadow-xl"
+    >
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a href="../index.html" class="text-2xl font-bold text-blue-500"
+            >Avinash<span class="text-pink-500">.dev</span></a
+          >
+          <div class="hidden md:flex space-x-8">
+            <a href="../index.html#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link active">About</a>
+            <a href="../index.html#skills" class="nav-link">Skills</a>
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <a href="../index.html#experience" class="nav-link">Experience</a>
+            <a href="../index.html#contact" class="nav-link">Contact</a>
           </div>
-          <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="../html/about.html">Know Me</a>
-            <a href="../html/resume.html">Resume</a>
-            <a href="../html/project.html">Projects</a>
-            <a href="../html/contact.html">Contact</a>
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gray-800 py-4 px-6 space-y-4"
+      >
+        <a href="../index.html#home" class="block nav-link">Home</a>
+        <a href="#about" class="block nav-link active">About</a>
+        <a href="../index.html#skills" class="block nav-link">Skills</a>
+        <a href="../index.html#projects" class="block nav-link">Projects</a>
+        <a href="../index.html#experience" class="block nav-link">Experience</a>
+        <a href="../index.html#contact" class="block nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="about-hero"
+      class="relative min-h-screen flex items-center justify-center z-10 pt-20"
+    >
+      <div class="container mx-auto px-8 py-32 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 text-gradient">
+          <span class="animate-text">About</span>
+          <span class="animate-text-delay-1 text-blue-500">Me</span>
+        </h1>
+        <div
+          class="w-24 h-1 bg-blue-500 mx-auto mb-8 animate-text-delay-2"
+        ></div>
+        <p class="text-xl max-w-3xl mx-auto mb-12 animate-text-delay-3">
+          Get to know more about my journey, skills, and what drives me as a
+          developer.
+        </p>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#about" class="text-blue-400 text-4xl">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Main About Section -->
+    <section id="about" class="py-20 relative z-10 bg-gray-800 bg-opacity-70">
+      <div class="container mx-auto px-8">
+        <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
+          <div class="md:w-1/2">
+            <img
+              src="/api/placeholder/500/500"
+              alt="Avinash Chhetri"
+              class="rounded-lg shadow-2xl w-full hover-lift"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6 text-gradient">Who Am I?</h2>
+            <p class="text-lg mb-6">
+              I'm Avinash Chhetri, a motivated Computer Science graduate with a
+              passion for building innovative software solutions. I specialize
+              in web development, automation, and AI/ML applications, with a
+              solid foundation in programming languages like Java, Python, and
+              SQL.
+            </p>
+            <p class="text-lg mb-6">
+              Currently working as an Assistant System Engineer at TCS, I
+              collaborate with teams in agile environments to drive innovation
+              and efficiency. My approach combines technical expertise with a
+              deep understanding of business requirements to deliver impactful
+              solutions.
+            </p>
+            <p class="text-lg mb-8">
+              My journey in tech is fueled by a continuous desire to learn and
+              grow, always staying updated with the latest industry trends and
+              technologies.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="resume.html" class="btn-primary">View Resume</a>
+              <a href="index.html#contact" class="btn-secondary"
+                >Get In Touch</a
+              >
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section id="education">
-        <h2>Education</h2>
-        <div class="education-container">
-          <p>
-            <i class="fas fa-graduation-cap"></i>
-            <b>VIT, Vellore |2020 - Present</b> <br />
-            B.Tech: CSE
-            <br />
-            <br />
-            <br />
-            <i class="fas fa-graduation-cap"></i>
-            <b>KIST College, Kathmandu |05/2019</b> <br />
-            +2: Science (PCM) <br />
-            GPA: 3.5
-            <br />
-            <br />
-            <br />
-            <i class="fas fa-graduation-cap"></i>
-            <b>New Light School, Butwal |2017</b> <br />
-            GPA:3.70
+
+        <!-- Education -->
+        <div class="mb-20">
+          <h2 class="section-title mb-10">Education</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="edu-card">
+              <div class="edu-year">2020 - 2024</div>
+              <h3 class="text-xl font-bold mb-2 text-blue-400">
+                B.Tech in Computer Science and Engineering
+              </h3>
+              <h4 class="text-lg font-medium mb-4">VIT, Vellore</h4>
+              <p class="mb-2">CGPA: 7.43</p>
+              <p>
+                Focused on core computer science concepts, software development,
+                and emerging technologies. Participated in various technical
+                projects and competitions to enhance practical skills.
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-year">2017 - 2019</div>
+              <h3 class="text-xl font-bold mb-2 text-blue-400">+2 (PCM)</h3>
+              <h4 class="text-lg font-medium mb-4">KIST College, Kathmandu</h4>
+              <p class="mb-2">GPA: 8.75</p>
+              <p>
+                Completed higher secondary education with a focus on Physics,
+                Chemistry, and Mathematics. Built a strong foundation in
+                analytical thinking and problem-solving.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Journey -->
+        <div class="mb-20">
+          <h2 class="section-title mb-10">My Journey</h2>
+          <div class="timeline-vertical">
+            <!-- Step 1 -->
+            <div class="timeline-item-vertical">
+              <div class="timeline-dot-vertical"></div>
+              <div class="timeline-content-vertical">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">2020</h3>
+                <p>
+                  Started my B.Tech journey at VIT, Vellore, diving into the
+                  world of Computer Science.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-item-vertical">
+              <div class="timeline-dot-vertical"></div>
+              <div class="timeline-content-vertical">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">2022</h3>
+                <p>
+                  Began exploring web development and building my first
+                  projects. Started learning AI/ML concepts and tools.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-item-vertical">
+              <div class="timeline-dot-vertical"></div>
+              <div class="timeline-content-vertical">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">2023</h3>
+                <p>
+                  Joined Suvidha Foundation as a Web Development Intern. Earned
+                  IBM AI Analyst certification. Developed multiple projects
+                  including Farm2Home and Sign Language Detector.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-item-vertical">
+              <div class="timeline-dot-vertical"></div>
+              <div class="timeline-content-vertical">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">2024</h3>
+                <p>
+                  Graduated from VIT and joined TCS as an Assistant System
+                  Engineer, working on cloud-based applications and automation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Interests -->
+        <div>
+          <h2 class="section-title mb-10">Beyond Coding</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="interest-card">
+              <div class="interest-icon bg-blue-500">
+                <i class="fas fa-brain text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Continuous Learning</h3>
+              <p>
+                I'm constantly expanding my knowledge through online courses,
+                technical documentation, and hands-on projects. I believe that
+                staying current with emerging technologies is essential in our
+                rapidly evolving field.
+              </p>
+            </div>
+
+            <div class="interest-card">
+              <div class="interest-icon bg-green-500">
+                <i class="fas fa-lightbulb text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Problem Solving</h3>
+              <p>
+                I enjoy tackling complex challenges and finding elegant
+                solutions. Whether it's optimizing algorithms or debugging a
+                tricky issue, I find satisfaction in the problem-solving
+                process.
+              </p>
+            </div>
+
+            <div class="interest-card">
+              <div class="interest-icon bg-purple-500">
+                <i class="fas fa-users text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Collaboration</h3>
+              <p>
+                I thrive in team environments where ideas can be shared and
+                refined. I believe that the best solutions come from diverse
+                perspectives and collaborative efforts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative z-10">
+      <div class="container mx-auto px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Work Together?</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-8">
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../index.html#projects" class="btn-primary"
+            >View My Projects</a
+          >
+          <a href="../index.html#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-900 relative z-10">
+      <div class="container mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="../index.html" class="text-2xl font-bold text-blue-500"
+              >Avinash<span class="text-pink-500">.dev</span></a
+            >
+            <p class="mt-2 text-gray-400">
+              Building innovative solutions, one project at a time.
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="social-icon-sm"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon-sm"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-500">
+            &copy; 2025 Avinash Chhetri. All rights reserved.
           </p>
         </div>
-      </section>
-      <section id="certification">
-        <h2>Certification</h2>
-        <div class="certification-container">
-          <p>
-            <i class="fas fa-certificate"></i>
-            <b>AI Analyst | IBM | 2023</b><br /><br />
-            I have earned the AI analyst certification badge from IBM, which
-            demonstrates my proven expertise in applying machine learning
-            algorithms and building AI solutions using IBM Watson. My advanced
-            proficiency includes topics such as AI, Natural Language Processing
-            (NLP), chatbots, computer vision, Watson Studio, Watson Machine
-            Learning, AutoAI, Watson Assistant, Discovery, Natural Language
-            Understanding, Knowledge Studio, and Visual Recognition. I possess
-            skills in algorithms, artificial intelligence, AutoAI, CRISP-DM,
-            chatbots, cognitive computing, computer vision, Discovery, IBM
-            Watson, Jupyter Notebook, Knowledge Studio, machine learning, model
-            evaluation metrics, natural language processing, natural language
-            understanding, statistical models, visual recognition, Watson
-            services integration, and Watson Studio.
-          </p>
-        </div>
-      </section>
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-container">
-          <p>
-            <i class="fas fa-laptop-code"></i>
-            <b>Web Developer Intern | Suvidha Foundation | Mar - Apr 2023</b
-            ><br /><br />
-            I played a pivotal role at the NGO by developing and maintaining
-            their website, utilizing HTML, CSS, and JavaScript. Collaborating
-            with a team of developers, I focused on improving the website's user
-            interface and functionality. A significant achievement was
-            implementing an online donation feature, simplifying the process for
-            supporters to contribute. This experience enriched my
-            problem-solving and teamwork skills, which proved invaluable in the
-            fast-paced nonprofit sector. It allowed me to cultivate adaptability
-            and creative thinking while continuously refining the website to
-            effectively convey the organization's mission. My time at the NGO
-            was a fulfilling experience, where I made meaningful contributions
-            to a noble cause and honed my technical and interpersonal skills in
-            a dynamic environment.
-          </p>
-        </div>
-      </section>
-    </main>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

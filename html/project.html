@@ -2,163 +2,443 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/project.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Projects | Avinash Chhetri</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Projects</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="container">
-          <div class="logo">
-            <h1>My Portfolio</h1>
-          </div>
-          <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="../html/about.html">Know Me</a>
-            <a href="../html/resume.html">Resume</a>
-            <a href="../html/project.html" class="active">Projects</a>
-            <a href="../html/contact.html">Contact</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="containerr">
-        <div class="slider">
-          <div class="slider-content">
-            <div class="project-slide">
-              <img
-                class="project-image"
-                src="../resources/project1.png"
-                alt="Project 1"
-              />
-              <div class="project-details">
-                <h3>Farm2Home</h3>
-                <p class="tools">HTML | CSS | JS | PHP | MySQL</p>
-                <p class="decs">
-                  I led this project in my 5th semester as a part of my Software
-                  engineering project component. This project was a unique idea
-                  where we intended for farmers and consumers to connect
-                  digitally without the involvement of middleman. The project
-                  provided valuable experience in project management, web
-                  development, and ecommerce.
-                </p>
-              </div>
-            </div>
-            <div class="project-slide">
-              <img
-                class="project-image"
-                src="../resources/project2.png"
-                alt="Project 2"
-              />
-              <div class="project-details">
-                <h3>Sign Language Detection</h3>
-                <p>Python | AI | ML | CNN</p>
-                <p class="decs">
-                  In this project, we developed a model using Convolutional
-                  Neural Network (CNN) to detect sign language and convert it
-                  into English alphabets. We collected a dataset of hand sign
-                  images and preprocessed them using OpenCV to apply
-                  transformations like black and white conversion, Gaussian
-                  blur, and binary inversion. Two different sequential models
-                  were created, and the second model included dropout to prevent
-                  overfitting, achieving an accuracy of 99.18%. The model was
-                  trained using CNN layers and compiled using the Adam optimizer
-                  algorithm with categorical cross-entropy as the loss function.
-                  We plotted graphs of loss and accuracy versus epochs to check
-                  for overfitting. The saved model was then deployed on a web
-                  app using Flask, and HTML with bootstrap templates was used
-                  for styling the pages. This project aimed to enhance
-                  communication for people who don't understand sign language
-                  and achieved high accuracy in detecting hand signs.
-                </p>
-              </div>
-            </div>
-            <div class="project-slide">
-              <img
-                class="project-image"
-                src="../resources/project3.png"
-                alt="Project 3"
-                id="ProjImg3"
-              />
-              <div class="project-details">
-                <h3>Text-Summarizer-with-WSD</h3>
-                <p>Python | AI | NLP | Flask</p>
-                <p class="decs">
-                  This project is a text summarization system with Word Sense
-                  Disambiguation (WSD) implemented using Python and various NLP
-                  libraries. The system takes a paragraph of text as input and
-                  performs Part-of-Speech tagging and Named Entity Recognition
-                  using the spaCy library. It then identifies repeating words
-                  with different POS tagging and creates a list of potential
-                  target words for WSD. The system generates summaries for each
-                  target word using the T5 transformer model from Hugging Face,
-                  and compares the results using the Rouge evaluation metric.
-                  The system also uses an n-gram model to predict the most
-                  appropriate word for each target word, based on the context.
-                  The output is the summary with the highest Rouge score. The
-                  system is implemented as a Flask web application . The
-                  application allows users to input a paragraph of text and get
-                  a summary with the best Rouge score. The project includes a
-                  detailed README.txt file with instructions on how to run the
-                  application, a requirements.txt file with all the
-                  dependencies, and a license file. The code is well-documented
-                  and follows best practices for Python development.
-                </p>
-              </div>
-            </div>
-            <div class="project-slide">
-              <img
-                class="project-image"
-                src="../resources/project4.png"
-                alt="Project 4"
-                id="ProjImg3"
-              />
-              <div class="project-details">
-                <h3>VIT-Share   |  sharing app</h3>
-                <p>Java | Android | XML </p>
-                <p class="decs">
-                  It is an Android application developed using Android Studio. This mobile app serves as a dynamic and convenient platform for hostel students to facilitate the sharing of various items among their peers within the same hostel or dormitory.
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Particles background -->
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
 
-At its core, this app allows users to post requests for specific items they need or alternatively, browse and accept requests from fellow students seeking assistance with particular items. This innovative solution fosters a sense of community and resource sharing among hostel residents.
-
-Whether it's borrowing a charger for a few hours, finding a textbook for an upcoming exam, or requesting a kitchen appliance for a one-time use, this app streamlines the process of acquiring these items. Hostel students can easily connect with one another, helping to fulfill immediate needs without the hassle of purchasing or searching for items outside of their immediate network.
-                </p>
-              </div>
-            </div>
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 shadow-xl"
+    >
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a href="index.html" class="text-2xl font-bold text-blue-500"
+            >Avinash<span class="text-pink-500">.dev</span></a
+          >
+          <div class="hidden md:flex space-x-8">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link active">Projects</a>
+            <a href="index.html#experience" class="nav-link">Experience</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
           </div>
-          </div>
-          
-          <button
-            class="slider-button previous-button"
-            onclick="previousSlide()" >
-            <i class="fas fa-forward fa-rotate-180 fa-lg"></i>
-          </button>
-          <button class="slider-button next-button" onclick="nextSlide()">
-            <i class="fas fa-forward fa-lg"></i>
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
           </button>
         </div>
       </div>
-    </main>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gray-800 py-4 px-6 space-y-4"
+      >
+        <a href="index.html#home" class="block nav-link">Home</a>
+        <a href="index.html#about" class="block nav-link">About</a>
+        <a href="index.html#skills" class="block nav-link">Skills</a>
+        <a href="#projects" class="block nav-link active">Projects</a>
+        <a href="index.html#experience" class="block nav-link">Experience</a>
+        <a href="index.html#contact" class="block nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="projects-hero"
+      class="relative min-h-screen flex items-center justify-center z-10 pt-20"
+    >
+      <div class="container mx-auto px-8 py-32 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 text-gradient">
+          <span class="animate-text">My</span>
+          <span class="animate-text-delay-1 text-blue-500">Projects</span>
+        </h1>
+        <div
+          class="w-24 h-1 bg-blue-500 mx-auto mb-8 animate-text-delay-2"
+        ></div>
+        <p class="text-xl max-w-3xl mx-auto mb-12 animate-text-delay-3">
+          A showcase of my technical skills, creativity, and problem-solving
+          abilities through various projects.
+        </p>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#projects" class="text-blue-400 text-4xl">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section
+      id="projects"
+      class="py-20 relative z-10 bg-gray-800 bg-opacity-70"
+    >
+      <div class="container mx-auto px-8">
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="ai">AI/ML</button>
+          <button class="filter-btn" data-filter="desktop">
+            Desktop Applications
+          </button>
+          <button class="filter-btn" data-filter="api">API Development</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Farm2Home"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="project-overlay">
+                <a href="project1.html" class="btn-small">View Details</a>
+                <a href="#" class="btn-small-outline">Live Demo</a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Farm2Home</h3>
+              <p class="text-gray-300 mb-4">
+                An online platform for farmers that facilitates direct digital
+                interaction between farmers and consumers, eliminating
+                intermediaries.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+              <p class="text-sm text-gray-400">
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: December
+                2023
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="ai">
+            <div class="project-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Sign Language Detector"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="project-overlay">
+                <a href="project2.html" class="btn-small">View Details</a>
+                <a href="#" class="btn-small-outline">Live Demo</a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Sign Language Detector</h3>
+              <p class="text-gray-300 mb-4">
+                A system using Neural Networks and ML algorithms to detect sign
+                language, achieving over 90% accuracy with a proprietary
+                dataset.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">AI/ML</span>
+                <span class="tech-badge">Neural Networks</span>
+                <span class="tech-badge">TensorFlow</span>
+              </div>
+              <p class="text-sm text-gray-400">
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: November
+                2023
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="desktop">
+            <div class="project-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Course Management System"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="project-overlay">
+                <a href="project3.html" class="btn-small">View Details</a>
+                <a href="#" class="btn-small-outline">Live Demo</a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Course Management System</h3>
+              <p class="text-gray-300 mb-4">
+                A comprehensive system enabling course creation, enrollment, and
+                management with secure authentication and role-based access
+                control.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Swing</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">JDBC</span>
+              </div>
+              <p class="text-sm text-gray-400">
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: March 2023
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" data-category="api">
+            <div class="project-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Bookstore Management API"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="project-overlay">
+                <a href="project4.html" class="btn-small">View Details</a>
+                <a href="#" class="btn-small-outline">Live Demo</a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Bookstore Management API</h3>
+              <p class="text-gray-300 mb-4">
+                A RESTful API for managing bookstore operations, facilitating
+                book addition, retrieval, update, and deletion with secure
+                authentication.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">SQL Alchemy</span>
+                <span class="tech-badge">Swagger</span>
+              </div>
+              <p class="text-sm text-gray-400">
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: February
+                2024
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card" data-category="web ai">
+            <div class="project-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Sentiment Analysis Dashboard"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="project-overlay">
+                <a href="project5.html" class="btn-small">View Details</a>
+                <a href="#" class="btn-small-outline">Live Demo</a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                Sentiment Analysis Dashboard
+              </h3>
+              <p class="text-gray-300 mb-4">
+                A web application that analyzes and visualizes sentiment from
+                social media posts and customer reviews using NLP techniques.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">NLTK</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Chart.js</span>
+              </div>
+              <p class="text-sm text-gray-400">
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: January 2024
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card" data-category="desktop">
+            <div class="project-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Inventory Management System"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="project-overlay">
+                <a href="project6.html" class="btn-small">View Details</a>
+                <a href="#" class="btn-small-outline">Live Demo</a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                Inventory Management System
+              </h3>
+              <p class="text-gray-300 mb-4">
+                A desktop application for tracking inventory, managing stock
+                levels, and generating reports for small businesses.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">JavaFX</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">JasperReports</span>
+              </div>
+              <p class="text-sm text-gray-400">
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: September
+                2023
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Process Section -->
+    <section class="py-20 relative z-10">
+      <div class="container mx-auto px-8">
+        <h2 class="section-title">My Development Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+          <div class="process-card">
+            <div class="process-icon">
+              <i class="fas fa-lightbulb text-yellow-400"></i>
+              <div class="process-number">01</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Ideation & Planning</h3>
+            <p>
+              I start by understanding the problem, researching similar
+              solutions, and planning the project architecture and features.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-icon">
+              <i class="fas fa-code text-blue-400"></i>
+              <div class="process-number">02</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Development</h3>
+            <p>
+              Using the most suitable technologies, I develop the solution with
+              a focus on code quality, performance, and user experience.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-icon">
+              <i class="fas fa-vial text-green-400"></i>
+              <div class="process-number">03</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Testing & Refinement</h3>
+            <p>
+              I rigorously test the solution to identify and fix bugs, optimize
+              performance, and refine the user interface.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-icon">
+              <i class="fas fa-rocket text-purple-400"></i>
+              <div class="process-number">04</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Deployment & Maintenance</h3>
+            <p>
+              After deployment, I monitor performance, gather user feedback, and
+              make continuous improvements to the solution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaboration CTA -->
+    <section
+      class="py-20 relative z-10 bg-gradient-to-r from-blue-600 to-purple-600"
+    >
+      <div class="container mx-auto px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Have a Project in Mind?</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-8">
+          I'm always looking for interesting projects and collaborations. Let's
+          work together to bring your ideas to life.
+        </p>
+        <a href="index.html#contact" class="btn-white">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-900 relative z-10">
+      <div class="container mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="index.html" class="text-2xl font-bold text-blue-500"
+              >Avinash<span class="text-pink-500">.dev</span></a
+            >
+            <p class="mt-2 text-gray-400">
+              Building innovative solutions, one project at a time.
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="social-icon-sm"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon-sm"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-500">
+            &copy; 2025 Avinash Chhetri. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Project filtering functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            // Get filter value
+            const filterValue = this.getAttribute("data-filter");
+
+            // Filter projects
+            projectCards.forEach((card) => {
+              if (filterValue === "all") {
+                card.style.display = "block";
+              } else {
+                const categories = card
+                  .getAttribute("data-category")
+                  .split(" ");
+                if (categories.includes(filterValue)) {
+                  card.style.display = "block";
+                } else {
+                  card.style.display = "none";
+                }
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
-  <script src="../js/project.js"></script>
 </html>
