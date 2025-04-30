@@ -226,6 +226,15 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Add this to your style.css file */
+#about img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Adjust this value as needed */
+  object-fit: initial;
+  object-position: center;
+}
+
 /* Tech Tags */
 .tech-tag {
   display: inline-block;
