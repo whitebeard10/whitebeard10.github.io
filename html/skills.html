@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Avinash Chhetri</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 shadow-xl"
+    >
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a href="index.html" class="text-2xl font-bold text-blue-500"
+            >Avinash<span class="text-pink-500">.dev</span></a
+          >
+          <div class="hidden md:flex space-x-8">
+            <a href="../index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="#skills" class="nav-link active">Skills</a>
+            <a href="project.html" class="nav-link">Projects</a>
+            <a href="../index.html#experience" class="nav-link">Experience</a>
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+          </div>
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gray-800 py-4 px-6 space-y-4"
+      >
+        <a href="../index.html#home" class="block nav-link">Home</a>
+        <a href="about.html" class="block nav-link">About</a>
+        <a href="#skills" class="block nav-link active">Skills</a>
+        <a href="project.html" class="block nav-link">Projects</a>
+        <a href="../index.html#experience" class="block nav-link">Experience</a>
+        <a href="index.html#contact" class="block nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="skills-hero"
+      class="relative min-h-screen flex items-center justify-center z-10"
+    >
+      <div class="container mx-auto px-8 text-center">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 text-gradient">
+          <span class="text">My</span>
+          <span class="text">Skills</span>
+        </h1>
+        <div
+          class="w-32 h-1.5 bg-blue-500 mx-auto mb-10 animate-text-delay-2 rounded-full"
+        ></div>
+        <p class="text-xl max-w-3xl mx-auto mb-12 animate-text-delay-3">
+          Explore the range of technical skills I bring to the table as a
+          Software Developer.
+        </p>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#skills" class="text-blue-400 text-4xl">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Skills Section -->
+    <section id="skills" class="py-20 relative z-10 bg-gray-800 bg-opacity-70">
+      <div class="container mx-auto px-8">
+        <h2 class="section-title text-blue-400 mb-12">My Expertise</h2>
+
+        <!-- Web Development Skills -->
+        <div class="mb-20">
+          <h3 class="text-3xl font-bold mb-8 text-yellow-400">
+            Web Development
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-blue-300">HTML5</h4>
+              <div class="skill-bar" data-percent="90">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-11/12 bg-blue-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">90%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Proficient in semantic markup and structuring web content.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-blue-300">CSS3</h4>
+              <div class="skill-bar" data-percent="90">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-11/12 bg-blue-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">90%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Expert in styling web pages using CSS3 features.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-blue-300">
+                JavaScript
+              </h4>
+              <div class="skill-bar" data-percent="85">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-10/12 bg-blue-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">85%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Strong in ES6+, DOM manipulation, and asynchronous programming.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-blue-300">React</h4>
+              <div class="skill-bar" data-percent="75">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-3/4 bg-blue-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">75%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Knowledge of building dynamic UI with React components.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-blue-300">
+                Tailwind CSS
+              </h4>
+              <div class="skill-bar" data-percent="85">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-10/12 bg-blue-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">85%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Skilled in using Tailwind CSS for rapid UI development.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-blue-300">
+                Responsive Design
+              </h4>
+              <div class="skill-bar" data-percent="90">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-11/12 bg-blue-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">90%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Experience in creating responsive designs that work seamlessly
+                across different devices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programming Languages Skills -->
+        <div class="mb-20">
+          <h3 class="text-3xl font-bold mb-8 text-green-400">
+            Programming Languages
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-green-300">Python</h4>
+              <div class="skill-bar" data-percent="85">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-10/12 bg-green-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">85%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Expertise in using Flask and Django for web applications.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-green-300">Java</h4>
+              <div class="skill-bar" data-percent="80">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-4/5 bg-green-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">80%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Skilled in object-oriented programming, Spring Boot, and data
+                handling.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-green-300">SQL</h4>
+              <div class="skill-bar" data-percent="75">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-3/4 bg-green-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">75%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Experience in database management and writing complex queries.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI/ML Skills -->
+        <div class="mb-20">
+          <h3 class="text-3xl font-bold mb-8 text-purple-400">
+            AI & Machine Learning
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-purple-300">
+                TensorFlow/PyTorch
+              </h4>
+              <div class="skill-bar" data-percent="80">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-4/5 bg-purple-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">80%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Familiar with building neural networks and deep learning models.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-purple-300">NLP</h4>
+              <div class="skill-bar" data-percent="75">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-3/4 bg-purple-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">75%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Expert in applying Natural Language Processing techniques for
+                text analysis.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-purple-300">
+                Scikit-learn
+              </h4>
+              <div class="skill-bar" data-percent="75">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-3/4 bg-purple-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">75%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Skilled in applying various machine learning algorithms and
+                techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Tools -->
+        <div class="mb-10">
+          <h3 class="text-3xl font-bold mb-8 text-yellow-400">
+            Other Tools & Skills
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
+                Git/Version Control
+              </h4>
+              <div class="skill-bar" data-percent="85">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-10/12 bg-yellow-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">85%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Experienced in using Git for collaborative coding and version
+                control.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
+                Agile Methodologies
+              </h4>
+              <div class="skill-bar" data-percent="80">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-4/5 bg-yellow-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">80%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Adept in agile methodologies, including scrum and sprint
+                planning.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
+                Communication
+              </h4>
+              <div class="skill-bar" data-percent="90">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-11/12 bg-yellow-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">90%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Excellent written and verbal communication skills.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
+                Problem Solving
+              </h4>
+              <div class="skill-bar" data-percent="80">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-4/5 bg-yellow-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">80%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Analytical thinker with strong problem-solving abilities.
+              </p>
+            </div>
+            <div
+              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
+                Testing
+              </h4>
+              <div class="skill-bar" data-percent="70">
+                <div class="skill-progress">
+                  <div
+                    class="skill-percent w-7/10 bg-yellow-500 h-3 rounded-full"
+                  ></div>
+                </div>
+                <p class="text-gray-300 mt-2">70%</p>
+              </div>
+              <p class="text-gray-400 mt-3">
+                Experience in unit testing, integration testing with frameworks
+                like JUnit, PyTest.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-10 bg-gray-900 relative z-10">
+      <div class="container mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="index.html" class="text-2xl font-bold text-blue-500"
+              >Avinash<span class="text-pink-500">.dev</span></a
+            >
+            <p class="mt-2 text-gray-400">
+              Building innovative solutions, one project at a time.
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://github.com/whitebeard10" class="social-icon-sm">
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/avinash-chhetri/"
+              class="social-icon-sm"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-500">
+            &copy; 2025 Avinash Chhetri. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

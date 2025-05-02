@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="bg-gray-900 text-white font-sans">
     <!-- Particles background -->
@@ -61,8 +61,8 @@
     >
       <div class="container mx-auto px-8 py-32 text-center">
         <h1 class="text-5xl md:text-7xl font-bold mb-4 text-gradient">
-          <span class="animate-text">My</span>
-          <span class="animate-text-delay-1 text-blue-500">Projects</span>
+          <span class="text">My</span>
+          <span class="text">Projects</span>
         </h1>
         <div
           class="w-24 h-1 bg-blue-500 mx-auto mb-8 animate-text-delay-2"
@@ -105,13 +105,16 @@
           <div class="project-card" data-category="web">
             <div class="project-image">
               <img
-                src="/api/placeholder/400/300"
+                src="../resources/farn2home.png"
                 alt="Farm2Home"
                 class="w-full h-48 object-cover rounded-t-lg"
               />
               <div class="project-overlay">
-                <a href="project1.html" class="btn-small">View Details</a>
-                <a href="#" class="btn-small-outline">Live Demo</a>
+                <a
+                  href="https://github.com/whitebeard10/farm2home"
+                  class="btn-small"
+                  >Go to Repo</a
+                >
               </div>
             </div>
             <div class="p-6">
@@ -122,8 +125,8 @@
                 intermediaries.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
                 <span class="tech-badge">JavaScript</span>
                 <span class="tech-badge">PHP</span>
                 <span class="tech-badge">MySQL</span>
@@ -139,14 +142,10 @@
           <div class="project-card" data-category="ai">
             <div class="project-image">
               <img
-                src="/api/placeholder/400/300"
+                src="../resources/sign_language_detection.png"
                 alt="Sign Language Detector"
                 class="w-full h-48 object-cover rounded-t-lg"
               />
-              <div class="project-overlay">
-                <a href="project2.html" class="btn-small">View Details</a>
-                <a href="#" class="btn-small-outline">Live Demo</a>
-              </div>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Sign Language Detector</h3>
@@ -172,13 +171,16 @@
           <div class="project-card" data-category="desktop">
             <div class="project-image">
               <img
-                src="/api/placeholder/400/300"
+                src="../resources/course_management_system.png"
                 alt="Course Management System"
                 class="w-full h-48 object-cover rounded-t-lg"
               />
               <div class="project-overlay">
-                <a href="project3.html" class="btn-small">View Details</a>
-                <a href="#" class="btn-small-outline">Live Demo</a>
+                <a
+                  href="https://github.com/whitebeard10/Course-Management-System-Java-Application"
+                  class="btn-small"
+                  >Go to Repo</a
+                >
               </div>
             </div>
             <div class="p-6">
@@ -204,18 +206,21 @@
           <div class="project-card" data-category="api">
             <div class="project-image">
               <img
-                src="/api/placeholder/400/300"
-                alt="Bookstore Management API"
+                src="../resources/postman.png"
+                alt="RESTful API for a Bookstore Management System"
                 class="w-full h-48 object-cover rounded-t-lg"
               />
               <div class="project-overlay">
-                <a href="project4.html" class="btn-small">View Details</a>
-                <a href="#" class="btn-small-outline">Live Demo</a>
+                <a
+                  href="https://github.com/whitebeard10/RESTful-API-for-a-Bookstore-Management-System"
+                  class="btn-small"
+                  >Go to Repo</a
+                >
               </div>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Bookstore Management API</h3>
-              <p class="text-gray-300 mb-4">
+              <p class="text-gray-300 mb-4 overflow-hidden">
                 A RESTful API for managing bookstore operations, facilitating
                 book addition, retrieval, update, and deletion with secure
                 authentication.
@@ -233,66 +238,70 @@
             </div>
           </div>
 
-          <!-- Project 5 -->
-          <div class="project-card" data-category="web ai">
+          <!-- Project 5: Sharing App -->
+          <div class="project-card" data-category="web">
             <div class="project-image">
               <img
-                src="/api/placeholder/400/300"
-                alt="Sentiment Analysis Dashboard"
+                src="../resources/project4.png"
+                alt="Sharing App"
                 class="w-full h-48 object-cover rounded-t-lg"
               />
               <div class="project-overlay">
-                <a href="project5.html" class="btn-small">View Details</a>
-                <a href="#" class="btn-small-outline">Live Demo</a>
+                <a
+                  href="https://github.com/whitebeard10/sharing-app"
+                  class="btn-small"
+                  >Go to Repo</a
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                Sentiment Analysis Dashboard
-              </h3>
-              <p class="text-gray-300 mb-4">
-                A web application that analyzes and visualizes sentiment from
-                social media posts and customer reviews using NLP techniques.
+              <h3 class="text-xl font-bold mb-2">Sharing App</h3>
+              <p class="text-gray-300 mb-4 overflow-hidden">
+                A web application enabling secure file sharing with features for
+                managing user accounts and controlling access to uploaded files.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">Flask</span>
-                <span class="tech-badge">NLTK</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">Chart.js</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JS</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
               </div>
               <p class="text-sm text-gray-400">
-                <i class="fas fa-calendar-alt mr-2"></i> Completed: January 2024
+                <i class="fas fa-calendar-alt mr-2"></i> Completed: December
+                2023
               </p>
             </div>
           </div>
 
-          <!-- Project 6 -->
-          <div class="project-card" data-category="desktop">
+          <!-- Project 6: Text Summarizer with WSD -->
+          <div class="project-card" data-category="ai">
             <div class="project-image">
               <img
-                src="/api/placeholder/400/300"
-                alt="Inventory Management System"
+                src="../resources/project3.png"
+                alt="Text Summarizer with WSD"
                 class="w-full h-48 object-cover rounded-t-lg"
               />
               <div class="project-overlay">
-                <a href="project6.html" class="btn-small">View Details</a>
-                <a href="#" class="btn-small-outline">Live Demo</a>
+                <a
+                  href="https://github.com/whitebeard10/Text-Summarizer-with-WSD"
+                  class="btn-small"
+                  >Go to Repo</a
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                Inventory Management System
-              </h3>
-              <p class="text-gray-300 mb-4">
-                A desktop application for tracking inventory, managing stock
-                levels, and generating reports for small businesses.
+              <h3 class="text-xl font-bold mb-2">Text Summarizer with WSD</h3>
+              <p class="text-gray-300 mb-4 overflow-hidden">
+                An advanced text summarization tool that utilizes Word Sense
+                Disambiguation (WSD) techniques to enhance the accuracy and
+                relevance of summaries.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge">Java</span>
-                <span class="tech-badge">JavaFX</span>
-                <span class="tech-badge">PostgreSQL</span>
-                <span class="tech-badge">JasperReports</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">NLP</span>
+                <span class="tech-badge">NLTK</span>
+                <span class="tech-badge">WSD</span>
               </div>
               <p class="text-sm text-gray-400">
                 <i class="fas fa-calendar-alt mr-2"></i> Completed: September
@@ -370,7 +379,7 @@
           I'm always looking for interesting projects and collaborations. Let's
           work together to bring your ideas to life.
         </p>
-        <a href="../index.html#contact" class="btn-white">Get In Touch</a>
+        <a href="../index.html#contact" class="btn-primary">Get In Touch</a>
       </div>
     </section>
 
