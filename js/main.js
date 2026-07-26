@@ -1,334 +1,345 @@
-// Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Particles.js
+// =============================================
+// JARVIS UI — Main JavaScript
+// =============================================
+
+document.addEventListener('DOMContentLoaded', function () {
   initParticles();
-
-  // Mobile menu toggle
+  initNav();
   initMobileMenu();
-
-  // Smooth scrolling for nav links
   initSmoothScroll();
-
-  // Animate skill bars on scroll
   initSkillBars();
-
-  // Initialize testimonial slider
-  initTestimonialSlider();
-
-  // Form submission
   initContactForm();
-
-  // Initialize navigation active state
   initNavActive();
+  initProjectFilter();
+  initTypingEffect();
+  initScrollReveal();
 });
 
-// Initialize particles.js
+// =============================================
+// PARTICLES.JS — Arc Reactor Style
+// =============================================
 function initParticles() {
-  if (typeof particlesJS !== "undefined") {
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800,
-          },
-        },
-        color: {
-          value: "#3b82f6",
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "#000000",
-          },
-        },
-        opacity: {
-          value: 0.2,
-          random: false,
-          anim: {
-            enable: false,
-          },
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-          },
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#3b82f6",
-          opacity: 0.1,
-          width: 1,
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: {
-            enable: false,
-          },
-        },
+  if (typeof particlesJS === 'undefined') return;
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 60, density: { enable: true, value_area: 900 } },
+      color: { value: '#00d4ff' },
+      shape: { type: 'circle' },
+      opacity: {
+        value: 0.15,
+        random: true,
+        anim: { enable: true, speed: 0.5, opacity_min: 0.05, sync: false }
       },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "grab",
-          },
-          onclick: {
-            enable: true,
-            mode: "push",
-          },
-          resize: true,
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 0.5,
-            },
-          },
-          push: {
-            particles_nb: 4,
-          },
-        },
+      size: {
+        value: 2,
+        random: true,
+        anim: { enable: false }
       },
-      retina_detect: true,
-    });
-  }
+      line_linked: {
+        enable: true,
+        distance: 160,
+        color: '#00d4ff',
+        opacity: 0.07,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1.2,
+        direction: 'none',
+        random: true,
+        straight: false,
+        out_mode: 'out',
+        bounce: false
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: { enable: true, mode: 'grab' },
+        onclick: { enable: true, mode: 'push' },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 160, line_linked: { opacity: 0.4 } },
+        push: { particles_nb: 3 }
+      }
+    },
+    retina_detect: true
+  });
 }
 
-// Mobile menu toggle
+// =============================================
+// NAVIGATION — Scroll Effect
+// =============================================
+function initNav() {
+  const nav = document.getElementById('jarvis-nav');
+  if (!nav) return;
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+}
+
+// =============================================
+// MOBILE MENU
+// =============================================
 function initMobileMenu() {
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
 
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
+  toggle.addEventListener('click', function () {
+    menu.classList.toggle('open');
+    // Animate hamburger
+    const spans = toggle.querySelectorAll('span');
+    if (menu.classList.contains('open')) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  });
 
-    // Close mobile menu when clicking on a nav link
-    const mobileLinks = mobileMenu.querySelectorAll("a");
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", function () {
-        mobileMenu.classList.add("hidden");
-      });
+  // Close on link click
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      const spans = toggle.querySelectorAll('span');
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
     });
-  }
+  });
 }
 
-// Smooth scrolling for nav links
+// =============================================
+// SMOOTH SCROLL
+// =============================================
 function initSmoothScroll() {
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      // Only apply to links pointing to an ID on the same page
-      const href = this.getAttribute("href");
-      if (href.startsWith("#")) {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
         e.preventDefault();
-
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70, // Offset for fixed header
-            behavior: "smooth",
-          });
-        }
+        const offset = 70;
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+        });
       }
     });
   });
 }
 
-// Animate skill bars on scroll
+// =============================================
+// SKILL BARS — Animated Fill
+// =============================================
 function initSkillBars() {
-  const skillBars = document.querySelectorAll(".skill-bar");
+  const bars = document.querySelectorAll('.skill-bar-fill[data-width]');
+  if (bars.length === 0) return;
 
-  // Function to check if an element is in viewport
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          entry.target.style.width = entry.target.getAttribute('data-width') + '%';
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-  // Function to animate skill bars
-  function animateSkillBars() {
-    skillBars.forEach((skillBar) => {
-      if (isInViewport(skillBar) && !skillBar.classList.contains("animated")) {
-        const percent = skillBar.getAttribute("data-percent");
-        const percentElement = skillBar.querySelector(".skill-percent");
-
-        skillBar.classList.add("animated");
-        setTimeout(() => {
-          if (percentElement) {
-            percentElement.style.width = `${percent}%`;
-          }
-        }, 100);
-      }
-    });
-  }
-
-  // Run on page load
-  animateSkillBars();
-
-  // Run on scroll
-  window.addEventListener("scroll", animateSkillBars);
+  bars.forEach(bar => observer.observe(bar));
 }
 
-// Initialize testimonial slider
-function initTestimonialSlider() {
-  const testimonialContainer = document.querySelector(".testimonial-container");
-  const testimonialCards = document.querySelectorAll(".testimonial-card");
-  const testimonialDots = document.querySelectorAll(".testimonial-dot");
-  let currentSlide = 0;
+// =============================================
+// CONTACT FORM
+// =============================================
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
 
-  if (
-    testimonialContainer &&
-    testimonialCards.length > 0 &&
-    testimonialDots.length > 0
-  ) {
-    // Set up click events for the dots
-    testimonialDots.forEach((dot, index) => {
-      dot.addEventListener("click", function () {
-        goToSlide(index);
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const btn = form.querySelector('button[type="submit"]');
+
+    // Disable
+    [...form.elements].forEach(el => el.disabled = true);
+    btn.innerHTML = '<i class="fas fa-satellite-dish"></i> TRANSMITTING...';
+
+    fetch('https://formspree.io/f/mblgoqny', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, subject, message })
+    })
+      .then(res => res.json())
+      .then(() => {
+        form.innerHTML = `
+          <div style="padding:2rem; border:1px solid #00ff88; background:rgba(0,255,136,0.05); text-align:center;">
+            <div style="font-family:'Orbitron',sans-serif; font-size:0.7rem; letter-spacing:3px; color:#00ff88; margin-bottom:1rem;">
+              ◆ TRANSMISSION SUCCESSFUL ◆
+            </div>
+            <p style="font-family:'Rajdhani',sans-serif; color:rgba(180,230,255,0.7); font-size:1rem;">
+              Thank you, ${name}! Message received. I'll respond shortly.
+            </p>
+          </div>
+        `;
+      })
+      .catch(() => {
+        form.innerHTML = `
+          <div style="padding:2rem; border:1px solid #ff4444; background:rgba(255,68,68,0.05); text-align:center;">
+            <div style="font-family:'Orbitron',sans-serif; font-size:0.7rem; letter-spacing:3px; color:#ff4444; margin-bottom:1rem;">
+              ◆ TRANSMISSION FAILED ◆
+            </div>
+            <p style="font-family:'Rajdhani',sans-serif; color:rgba(180,230,255,0.7); font-size:1rem;">
+              Something went wrong. Please try again or email directly.
+            </p>
+          </div>
+        `;
+      });
+  });
+}
+
+// =============================================
+// NAV ACTIVE STATE on Scroll
+// =============================================
+function initNavActive() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+  );
+
+  sections.forEach(s => observer.observe(s));
+}
+
+// =============================================
+// PROJECT FILTER
+// =============================================
+function initProjectFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card[data-category]');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const cats = card.getAttribute('data-category').split(' ');
+        if (filter === 'all' || cats.includes(filter)) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeSlideUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
       });
     });
+  });
+}
 
-    // Function to go to a specific slide
-    function goToSlide(slideIndex) {
-      if (slideIndex < 0) slideIndex = testimonialCards.length - 1;
-      if (slideIndex >= testimonialCards.length) slideIndex = 0;
+// =============================================
+// TYPING EFFECT — Hero Status Text
+// =============================================
+function initTypingEffect() {
+  const statusEl = document.querySelector('.hero-status');
+  if (!statusEl) return;
 
-      testimonialContainer.style.transform = `translateX(-${
-        slideIndex * 100
-      }%)`;
+  const messages = [
+    'SYSTEM ONLINE // PORTFOLIO v2.0',
+    'LOADING MODULES // PLEASE STANDBY',
+    'ALL SYSTEMS NOMINAL // READY',
+    'JARVIS INTERFACE // INITIALIZED'
+  ];
 
-      // Update the active dot
-      testimonialDots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === slideIndex);
-      });
+  let msgIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-      currentSlide = slideIndex;
+  function type() {
+    const current = messages[msgIndex];
+
+    if (!isDeleting) {
+      statusEl.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        setTimeout(() => { isDeleting = true; type(); }, 3000);
+        return;
+      }
+    } else {
+      statusEl.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        msgIndex = (msgIndex + 1) % messages.length;
+      }
     }
 
-    // Automatic slider timer
-    let sliderInterval = setInterval(() => {
-      goToSlide(currentSlide + 1);
-    }, 5000);
-
-    // Pause slider on hover
-    testimonialContainer.addEventListener("mouseenter", () => {
-      clearInterval(sliderInterval);
-    });
-
-    testimonialContainer.addEventListener("mouseleave", () => {
-      sliderInterval = setInterval(() => {
-        goToSlide(currentSlide + 1);
-      }, 5000);
-    });
+    const speed = isDeleting ? 40 : 80;
+    setTimeout(type, speed);
   }
+
+  setTimeout(type, 2000);
 }
 
-// Initialize contact form
-function initContactForm() {
-  const contactForm = document.getElementById("contact-form");
+// =============================================
+// SCROLL REVEAL — Staggered card animations
+// =============================================
+function initScrollReveal() {
+  const revealEls = document.querySelectorAll('.jarvis-card, .skill-card, .project-card, .timeline-item, .stat-box, .edu-card, .interest-card');
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-      // Get form values
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value;
-
-      // Disable form elements
-      const formElements = contactForm.elements;
-      for (let i = 0; i < formElements.length; i++) {
-        formElements[i].disabled = true;
-      }
-
-      // Change button text
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalBtnText = submitBtn.textContent;
-      submitBtn.textContent = "Sending...";
-
-      // Send data to Formspree
-      fetch("https://formspree.io/f/mblgoqny", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, subject, message }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          // Show success message
-          contactForm.innerHTML = `
-            <div class="p-6 bg-green-500 bg-opacity-20 border border-green-500 rounded-lg">
-              <h3 class="text-xl font-bold mb-2 text-green-400">Message Sent!</h3>
-              <p>Thank you for reaching out, ${name}! I'll get back to you as soon as possible.</p>
-            </div>
-          `;
-        })
-        .catch((error) => {
-          // Show error message
-          contactForm.innerHTML = `
-            <div class="p-6 bg-red-500 bg-opacity-20 border border-red-500 rounded-lg">
-              <h3 class="text-xl font-bold mb-2 text-red-400">Error!</h3>
-              <p>Something went wrong. Please try again later.</p>
-            </div>
-          `;
-        });
-    });
-  }
-}
-
-// Set active nav link based on scroll position
-function initNavActive() {
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  function setActiveLink() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach((section) => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 100;
-      const sectionId = section.getAttribute("id");
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${sectionId}`) {
-            link.classList.add("active");
-          }
-        });
-      }
-    });
-  }
-
-  window.addEventListener("scroll", setActiveLink);
-
-  // Set active link on page load
-  setActiveLink();
+  revealEls.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
 }

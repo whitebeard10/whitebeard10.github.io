@@ -3,449 +3,516 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skills | Avinash Chhetri</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" type="image/png" href="../resources/logo.png" />
-  </head>
-  <body class="bg-gray-900 text-white font-sans">
-    <div id="particles-js" class="fixed inset-0 z-0"></div>
 
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 shadow-xl"
-    >
-      <div class="container mx-auto px-6 py-3">
-        <div class="flex justify-between items-center">
-          <a href="index.html" class="text-2xl font-bold text-blue-500"
-            >Avinash<span class="text-pink-500">.dev</span></a
-          >
-          <div class="hidden md:flex space-x-8">
-            <a href="../index.html#home" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="#skills" class="nav-link active">Skills</a>
-            <a href="project.html" class="nav-link">Projects</a>
-            <a href="../index.html#experience" class="nav-link">Experience</a>
-            <a href="../index.html#contact" class="nav-link">Contact</a>
-          </div>
-          <button id="menu-toggle" class="md:hidden focus:outline-none">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
-        </div>
+    <!-- ═══ PRIMARY META ═══════════════════════════════════════════ -->
+    <title>Skills of Avinash Chhetri | Python · FastAPI · LangChain · TensorFlow · Java · SQL</title>
+    <meta name="description" content="Technical skills of Avinash Chhetri — Python (85%), Java (80%), FastAPI, LangChain, TensorFlow, Scikit-learn, HTML/CSS (90%), JavaScript, PHP, MySQL, PostgreSQL, Docker, Git. Full-Stack Developer and AI Engineer at TCS." />
+    <meta name="keywords" content="Avinash Chhetri Skills, Python Developer, FastAPI Developer India, LangChain Developer, TensorFlow Developer, Java Developer, Web Developer Skills, AI ML Skills, Full Stack Developer Skills India, Scikit-learn, RAG Developer" />
+    <meta name="author" content="Avinash Chhetri" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="theme-color" content="#010810" />
+    <link rel="canonical" href="https://whitebeard10.github.io/html/skills.html" />
+
+    <!-- ═══ OPEN GRAPH ════════════════════════════════════════════== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Avinash Chhetri — Portfolio" />
+    <meta property="og:title" content="Skills | Avinash Chhetri — Python · FastAPI · LangChain · Java" />
+    <meta property="og:description" content="Comprehensive technical skills: Python 85%, HTML/CSS 90%, JavaScript 85%, Java 80%, FastAPI, LangChain, TensorFlow, PostgreSQL, Docker, Git, and more. Full-Stack Developer & AI Engineer at TCS, Noida." />
+    <meta property="og:url" content="https://whitebeard10.github.io/html/skills.html" />
+    <meta property="og:image" content="https://whitebeard10.github.io/resources/me.png" />
+    <meta property="og:image:alt" content="Avinash Chhetri — Technical Skills" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- ═══ TWITTER / X CARD ════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Skills | Avinash Chhetri — Python · FastAPI · LangChain · Java" />
+    <meta name="twitter:description" content="Python 85% · HTML/CSS 90% · FastAPI · LangChain · TensorFlow · Java 80% · SQL · Docker · Git. Full-Stack Dev & AI Engineer at TCS." />
+    <meta name="twitter:image" content="https://whitebeard10.github.io/resources/me.png" />
+    <meta name="twitter:creator" content="@whitebeard10" />
+
+    <!-- ═══ JSON-LD STRUCTURED DATA ══════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whitebeard10.github.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Skills", "item": "https://whitebeard10.github.io/html/skills.html" }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "name": "Technical Skills of Avinash Chhetri",
+          "url": "https://whitebeard10.github.io/html/skills.html",
+          "description": "A comprehensive overview of technical skills including programming languages, frameworks, AI/ML tools, and developer tools.",
+          "author": { "@id": "https://whitebeard10.github.io/#person" },
+          "about": [
+            { "@type": "DefinedTerm", "name": "Python", "inDefinedTermSet": "Programming Languages" },
+            { "@type": "DefinedTerm", "name": "Java", "inDefinedTermSet": "Programming Languages" },
+            { "@type": "DefinedTerm", "name": "JavaScript", "inDefinedTermSet": "Programming Languages" },
+            { "@type": "DefinedTerm", "name": "FastAPI", "inDefinedTermSet": "Frameworks" },
+            { "@type": "DefinedTerm", "name": "LangChain", "inDefinedTermSet": "AI Frameworks" },
+            { "@type": "DefinedTerm", "name": "TensorFlow", "inDefinedTermSet": "AI Frameworks" },
+            { "@type": "DefinedTerm", "name": "Scikit-learn", "inDefinedTermSet": "AI Frameworks" },
+            { "@type": "DefinedTerm", "name": "Docker", "inDefinedTermSet": "DevOps Tools" },
+            { "@type": "DefinedTerm", "name": "PostgreSQL", "inDefinedTermSet": "Databases" },
+            { "@type": "DefinedTerm", "name": "MySQL", "inDefinedTermSet": "Databases" },
+            { "@type": "DefinedTerm", "name": "Git", "inDefinedTermSet": "Tools" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══ ASSETS ════════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="../resources/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .skills-category-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--arc-orange);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-shadow: 0 0 10px rgba(255,107,0,0.3);
+      }
+      .skills-category-title::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255,107,0,0.4), transparent);
+      }
+      .skills-category-title i {
+        color: var(--arc-orange);
+        font-size: 0.9rem;
+      }
+
+      .skill-showcase-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-glow);
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+      }
+      .skill-showcase-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--jarvis-cyan), transparent);
+        opacity: 0.5;
+      }
+      .skill-showcase-card:hover {
+        border-color: rgba(0, 212, 255, 0.5);
+        background: var(--bg-card-hover);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 20px rgba(0,212,255,0.08);
+      }
+      .skill-showcase-title {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.8rem;
+        color: var(--text-primary);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .skill-showcase-title i {
+        color: var(--jarvis-cyan);
+        font-size: 0.85rem;
+      }
+      .skill-showcase-desc {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .tool-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0.35rem 0.85rem;
+        background: rgba(0, 212, 255, 0.04);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.65rem;
+        color: var(--jarvis-cyan);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        margin: 0.25rem 0.25rem 0.25rem 0;
+      }
+      .tool-chip:hover {
+        background: rgba(0, 212, 255, 0.12);
+        border-color: var(--jarvis-cyan);
+        box-shadow: 0 0 10px rgba(0,212,255,0.2);
+      }
+      .tool-chip i { font-size: 0.75rem; }
+
+      .cert-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-glow);
+        padding: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .cert-card:hover {
+        border-color: rgba(0,212,255,0.5);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      .cert-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,212,255,0.05);
+        border: 1px solid var(--border-glow);
+        font-size: 1.3rem;
+        color: var(--arc-orange);
+        text-shadow: 0 0 15px var(--arc-orange);
+      }
+      .cert-content h4 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        color: var(--text-primary);
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
+      }
+      .cert-content p {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+      }
+      .cert-content span {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.65rem;
+        color: var(--arc-orange);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="jarvis-nav" id="jarvis-nav">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-logo">Avinash<span>.dev</span></a>
+        <ul class="nav-links">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link active">Skills</a></li>
+          <li><a href="project.html" class="nav-link">Projects</a></li>
+          <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <div
-        id="mobile-menu"
-        class="md:hidden hidden bg-gray-800 py-4 px-6 space-y-4"
-      >
-        <a href="../index.html#home" class="block nav-link">Home</a>
-        <a href="about.html" class="block nav-link">About</a>
-        <a href="#skills" class="block nav-link active">Skills</a>
-        <a href="project.html" class="block nav-link">Projects</a>
-        <a href="../index.html#experience" class="block nav-link">Experience</a>
-        <a href="index.html#contact" class="block nav-link">Contact</a>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#" class="nav-link active">Skills</a>
+        <a href="project.html" class="nav-link">Projects</a>
+        <a href="../index.html#experience" class="nav-link">Experience</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section
-      id="skills-hero"
-      class="relative min-h-screen flex items-center justify-center z-10"
-    >
-      <div class="container mx-auto px-8 text-center">
-        <h1 class="text-6xl md:text-8xl font-bold mb-6 text-gradient">
-          <span class="text">My</span>
-          <span class="text">Skills</span>
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="page-hero-content animate-text">
+        <span class="section-label" style="display:block; margin-bottom:1rem;">// CAPABILITY MATRIX — LOADED</span>
+        <h1 class="page-title">
+          <span class="page-title-gradient">My Skills</span>
         </h1>
-        <div
-          class="w-32 h-1.5 bg-blue-500 mx-auto mb-10 animate-text-delay-2 rounded-full"
-        ></div>
-        <p class="text-xl max-w-3xl mx-auto mb-12 animate-text-delay-3">
-          Explore the range of technical skills I bring to the table as a
-          Software Developer.
+        <p class="page-subtitle animate-text-delay-2">
+          A comprehensive overview of the technical skills and tools I bring to every project.
         </p>
       </div>
-      <div
-        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
-        <a href="#skills" class="text-blue-400 text-4xl">
-          <i class="fas fa-chevron-down"></i>
-        </a>
-      </div>
+      <a href="#skills" class="scroll-indicator">
+        <span class="scroll-indicator-text">Scroll</span>
+        <div class="scroll-indicator-icon"><div class="scroll-indicator-dot"></div></div>
+      </a>
     </section>
 
-    <!-- Main Skills Section -->
-    <section id="skills" class="py-20 relative z-10 bg-gray-800 bg-opacity-70">
-      <div class="container mx-auto px-8">
-        <h2 class="section-title text-blue-400 mb-12">My Expertise</h2>
+    <!-- ============ SKILLS CONTENT ============ -->
+    <section id="skills" class="jarvis-section dark-bg">
+      <div class="section-container">
 
-        <!-- Web Development Skills -->
-        <div class="mb-20">
-          <h3 class="text-3xl font-bold mb-8 text-yellow-400">
-            Web Development
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-blue-300">HTML5</h4>
-              <div class="skill-bar" data-percent="90">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-11/12 bg-blue-500 h-3 rounded-full"
-                  ></div>
+        <!-- Web Development -->
+        <div style="margin-bottom: 4rem;">
+          <div class="skills-category-title"><i class="fas fa-globe"></i> Web Development</div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem;">
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fab fa-html5"></i> HTML5</div>
+                  <span class="skill-pct">90%</span>
                 </div>
-                <p class="text-gray-300 mt-2">90%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill cyan" data-width="90"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Proficient in semantic markup and structuring web content.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Proficient in semantic markup and structuring accessible web content.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-blue-300">CSS3</h4>
-              <div class="skill-bar" data-percent="90">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-11/12 bg-blue-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fab fa-css3-alt"></i> CSS3</div>
+                  <span class="skill-pct">90%</span>
                 </div>
-                <p class="text-gray-300 mt-2">90%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill cyan" data-width="90"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Expert in styling web pages using CSS3 features.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Expert in styling web pages using modern CSS3 features and animations.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-blue-300">
-                JavaScript
-              </h4>
-              <div class="skill-bar" data-percent="85">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-10/12 bg-blue-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fab fa-js"></i> JavaScript</div>
+                  <span class="skill-pct">85%</span>
                 </div>
-                <p class="text-gray-300 mt-2">85%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill cyan" data-width="85"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Strong in ES6+, DOM manipulation, and asynchronous programming.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Strong in ES6+, DOM manipulation, and asynchronous programming.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-blue-300">React</h4>
-              <div class="skill-bar" data-percent="75">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-3/4 bg-blue-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fab fa-php"></i> PHP</div>
+                  <span class="skill-pct">80%</span>
                 </div>
-                <p class="text-gray-300 mt-2">75%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill cyan" data-width="80"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Knowledge of building dynamic UI with React components.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Backend development with PHP, form handling, and MySQL integration.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-blue-300">
-                Tailwind CSS
-              </h4>
-              <div class="skill-bar" data-percent="85">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-10/12 bg-blue-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fas fa-flask"></i> Flask</div>
+                  <span class="skill-pct">75%</span>
                 </div>
-                <p class="text-gray-300 mt-2">85%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill cyan" data-width="75"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Skilled in using Tailwind CSS for rapid UI development.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">REST API development with Flask, SQLAlchemy, and Swagger docs.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-blue-300">
-                Responsive Design
-              </h4>
-              <div class="skill-bar" data-percent="90">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-11/12 bg-blue-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+                  <span class="skill-pct">90%</span>
                 </div>
-                <p class="text-gray-300 mt-2">90%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill cyan" data-width="90"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Experience in creating responsive designs that work seamlessly
-                across different devices.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Building responsive, mobile-first layouts across all screen sizes.</p>
             </div>
           </div>
         </div>
 
-        <!-- Programming Languages Skills -->
-        <div class="mb-20">
-          <h3 class="text-3xl font-bold mb-8 text-green-400">
-            Programming Languages
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-green-300">Python</h4>
-              <div class="skill-bar" data-percent="85">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-10/12 bg-green-500 h-3 rounded-full"
-                  ></div>
+        <!-- Programming Languages -->
+        <div style="margin-bottom: 4rem;">
+          <div class="skills-category-title"><i class="fas fa-terminal"></i> Programming Languages</div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem;">
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fab fa-python"></i> Python</div>
+                  <span class="skill-pct" style="color:#00ff88;">85%</span>
                 </div>
-                <p class="text-gray-300 mt-2">85%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill green" data-width="85"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Expertise in using Flask and Django for web applications.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Web dev, scripting, automation, data processing, and ML pipelines.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-green-300">Java</h4>
-              <div class="skill-bar" data-percent="80">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-4/5 bg-green-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fab fa-java"></i> Java</div>
+                  <span class="skill-pct" style="color:#00ff88;">80%</span>
                 </div>
-                <p class="text-gray-300 mt-2">80%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill green" data-width="80"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Skilled in object-oriented programming, Spring Boot, and data
-                handling.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">OOP, design patterns, desktop apps with Swing, JDBC database integration.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-green-300">SQL</h4>
-              <div class="skill-bar" data-percent="75">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-3/4 bg-green-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fas fa-database"></i> SQL</div>
+                  <span class="skill-pct" style="color:#00ff88;">75%</span>
                 </div>
-                <p class="text-gray-300 mt-2">75%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill green" data-width="75"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Experience in database management and writing complex queries.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">MySQL, complex queries, joins, stored procedures, and ORM frameworks.</p>
             </div>
           </div>
         </div>
 
-        <!-- AI/ML Skills -->
-        <div class="mb-20">
-          <h3 class="text-3xl font-bold mb-8 text-purple-400">
-            AI & Machine Learning
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-purple-300">
-                TensorFlow/PyTorch
-              </h4>
-              <div class="skill-bar" data-percent="80">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-4/5 bg-purple-500 h-3 rounded-full"
-                  ></div>
+        <!-- AI & ML -->
+        <div style="margin-bottom: 4rem;">
+          <div class="skills-category-title"><i class="fas fa-brain"></i> AI &amp; Machine Learning</div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem;">
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fas fa-robot"></i> TensorFlow</div>
+                  <span class="skill-pct" style="color:#b44fff;">80%</span>
                 </div>
-                <p class="text-gray-300 mt-2">80%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill purple" data-width="80"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Familiar with building neural networks and deep learning models.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Building and training neural networks for classification and detection tasks.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-purple-300">NLP</h4>
-              <div class="skill-bar" data-percent="75">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-3/4 bg-purple-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fas fa-chart-line"></i> Scikit-learn</div>
+                  <span class="skill-pct" style="color:#b44fff;">75%</span>
                 </div>
-                <p class="text-gray-300 mt-2">75%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill purple" data-width="75"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Expert in applying Natural Language Processing techniques for
-                text analysis.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">ML pipelines, feature engineering, model evaluation, and hyperparameter tuning.</p>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-purple-300">
-                Scikit-learn
-              </h4>
-              <div class="skill-bar" data-percent="75">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-3/4 bg-purple-500 h-3 rounded-full"
-                  ></div>
+            <div class="skill-showcase-card">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-showcase-title"><i class="fas fa-eye"></i> OpenCV</div>
+                  <span class="skill-pct" style="color:#b44fff;">70%</span>
                 </div>
-                <p class="text-gray-300 mt-2">75%</p>
+                <div class="skill-bar-track" style="margin-top:0.5rem;"><div class="skill-bar-fill purple" data-width="70"></div></div>
               </div>
-              <p class="text-gray-400 mt-3">
-                Skilled in applying various machine learning algorithms and
-                techniques.
-              </p>
+              <p class="skill-showcase-desc" style="margin-top:0.75rem;">Computer vision for real-time image processing and gesture detection.</p>
             </div>
           </div>
         </div>
 
-        <!-- Other Tools -->
-        <div class="mb-10">
-          <h3 class="text-3xl font-bold mb-8 text-yellow-400">
-            Other Tools & Skills
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
-                Git/Version Control
-              </h4>
-              <div class="skill-bar" data-percent="85">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-10/12 bg-yellow-500 h-3 rounded-full"
-                  ></div>
-                </div>
-                <p class="text-gray-300 mt-2">85%</p>
-              </div>
-              <p class="text-gray-400 mt-3">
-                Experienced in using Git for collaborative coding and version
-                control.
-              </p>
+        <!-- Tools & Technologies -->
+        <div style="margin-bottom: 4rem;">
+          <div class="skills-category-title"><i class="fas fa-tools"></i> Tools &amp; Technologies</div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            <span class="tool-chip"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tool-chip"><i class="fab fa-github"></i> GitHub</span>
+            <span class="tool-chip"><i class="fas fa-code-branch"></i> VS Code</span>
+            <span class="tool-chip"><i class="fab fa-docker"></i> Docker</span>
+            <span class="tool-chip"><i class="fas fa-server"></i> REST APIs</span>
+            <span class="tool-chip"><i class="fas fa-flask"></i> Postman</span>
+            <span class="tool-chip"><i class="fab fa-linux"></i> Linux</span>
+            <span class="tool-chip"><i class="fas fa-cloud"></i> Cloud Computing</span>
+            <span class="tool-chip"><i class="fas fa-project-diagram"></i> Agile / Scrum</span>
+            <span class="tool-chip"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tool-chip"><i class="fas fa-book"></i> NLTK</span>
+            <span class="tool-chip"><i class="fas fa-table"></i> Pandas</span>
+            <span class="tool-chip"><i class="fas fa-square-root-alt"></i> NumPy</span>
+            <span class="tool-chip"><i class="fas fa-chart-bar"></i> Matplotlib</span>
+            <span class="tool-chip"><i class="fas fa-bug"></i> Debugging</span>
+            <span class="tool-chip"><i class="fas fa-file-code"></i> Swagger</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div style="margin-bottom: 4rem;">
+          <div class="skills-category-title"><i class="fas fa-user-cog"></i> Soft Skills</div>
+          <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem;">
+            <div class="skill-showcase-card" style="text-align:center; padding:1.5rem 1rem;">
+              <i class="fas fa-puzzle-piece" style="font-size:1.5rem; color:var(--jarvis-cyan); text-shadow:0 0 15px var(--jarvis-cyan); margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--text-primary); letter-spacing:1.5px; text-transform:uppercase;">Problem Solving</div>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
-                Agile Methodologies
-              </h4>
-              <div class="skill-bar" data-percent="80">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-4/5 bg-yellow-500 h-3 rounded-full"
-                  ></div>
-                </div>
-                <p class="text-gray-300 mt-2">80%</p>
-              </div>
-              <p class="text-gray-400 mt-3">
-                Adept in agile methodologies, including scrum and sprint
-                planning.
-              </p>
+            <div class="skill-showcase-card" style="text-align:center; padding:1.5rem 1rem;">
+              <i class="fas fa-comments" style="font-size:1.5rem; color:#00ff88; text-shadow:0 0 15px #00ff88; margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--text-primary); letter-spacing:1.5px; text-transform:uppercase;">Communication</div>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
-                Communication
-              </h4>
-              <div class="skill-bar" data-percent="90">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-11/12 bg-yellow-500 h-3 rounded-full"
-                  ></div>
-                </div>
-                <p class="text-gray-300 mt-2">90%</p>
-              </div>
-              <p class="text-gray-400 mt-3">
-                Excellent written and verbal communication skills.
-              </p>
+            <div class="skill-showcase-card" style="text-align:center; padding:1.5rem 1rem;">
+              <i class="fas fa-users" style="font-size:1.5rem; color:#b44fff; text-shadow:0 0 15px #b44fff; margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--text-primary); letter-spacing:1.5px; text-transform:uppercase;">Team Collaboration</div>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
-                Problem Solving
-              </h4>
-              <div class="skill-bar" data-percent="80">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-4/5 bg-yellow-500 h-3 rounded-full"
-                  ></div>
-                </div>
-                <p class="text-gray-300 mt-2">80%</p>
-              </div>
-              <p class="text-gray-400 mt-3">
-                Analytical thinker with strong problem-solving abilities.
-              </p>
+            <div class="skill-showcase-card" style="text-align:center; padding:1.5rem 1rem;">
+              <i class="fas fa-graduation-cap" style="font-size:1.5rem; color:var(--arc-orange); text-shadow:0 0 15px var(--arc-orange); margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--text-primary); letter-spacing:1.5px; text-transform:uppercase;">Continuous Learning</div>
             </div>
-            <div
-              class="skill-card bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-4 text-yellow-300">
-                Testing
-              </h4>
-              <div class="skill-bar" data-percent="70">
-                <div class="skill-progress">
-                  <div
-                    class="skill-percent w-7/10 bg-yellow-500 h-3 rounded-full"
-                  ></div>
-                </div>
-                <p class="text-gray-300 mt-2">70%</p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <div class="skills-category-title"><i class="fas fa-certificate"></i> Certifications</div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fas fa-award"></i></div>
+              <div class="cert-content">
+                <h4>IBM AI Analyst Professional</h4>
+                <p>Comprehensive training in AI concepts, tools, and applications including Watson and ML frameworks.</p>
+                <span>IBM — 2023</span>
               </div>
-              <p class="text-gray-400 mt-3">
-                Experience in unit testing, integration testing with frameworks
-                like JUnit, PyTest.
-              </p>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fas fa-code"></i></div>
+              <div class="cert-content">
+                <h4>Python for Data Science</h4>
+                <p>Advanced Python programming for data analysis, visualization, and machine learning pipelines.</p>
+                <span>Coursera — 2022</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="py-10 bg-gray-900 relative z-10">
-      <div class="container mx-auto px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-6 md:mb-0">
-            <a href="index.html" class="text-2xl font-bold text-blue-500"
-              >Avinash<span class="text-pink-500">.dev</span></a
-            >
-            <p class="mt-2 text-gray-400">
-              Building innovative solutions, one project at a time.
-            </p>
+
+    <!-- ============ CTA ============ -->
+    <section class="jarvis-section cta-banner" style="padding:4rem 0;">
+      <div class="section-container" style="text-align:center;">
+        <span class="section-label" style="display:block; margin-bottom:1rem;">// WANT TO LEVERAGE THESE SKILLS?</span>
+        <h2 style="font-family:'Orbitron',sans-serif; font-size:clamp(1.5rem,3vw,2.2rem); font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--text-primary); margin-bottom:2rem;">
+          Let's Build Something Amazing
+        </h2>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="project.html" class="btn-primary" id="btn-see-projects"><i class="fas fa-rocket"></i> View Projects</a>
+          <a href="../index.html#contact" class="btn-secondary" id="btn-hire-me"><i class="fas fa-satellite-dish"></i> Hire Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="jarvis-footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div>
+            <a href="../index.html" class="footer-logo">Avinash<span>.dev</span></a>
+            <p class="footer-tagline">// BUILDING INNOVATIVE SOLUTIONS, ONE PROJECT AT A TIME</p>
           </div>
-          <div class="flex space-x-4">
-            <a href="https://github.com/whitebeard10" class="social-icon-sm">
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/avinash-chhetri/"
-              class="social-icon-sm"
-              ><i class="fab fa-linkedin"></i
-            ></a>
+          <div class="social-links">
+            <a href="https://github.com/whitebeard10" class="social-icon-sm" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/avinash-chhetri/" class="social-icon-sm" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p class="text-gray-500">
-            &copy; 2025 Avinash Chhetri. All rights reserved.
-          </p>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; 2025 AVINASH CHHETRI. ALL RIGHTS RESERVED.</p>
+          <div class="footer-status"><div class="status-dot"></div>SYSTEMS OPERATIONAL</div>
         </div>
       </div>
     </footer>
