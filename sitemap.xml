@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://whitebeard10.github.io/</loc>
+    <loc>https://avinashchhetri.netlify.app/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- About -->
   <url>
-    <loc>https://whitebeard10.github.io/html/about.html</loc>
+    <loc>https://avinashchhetri.netlify.app/html/about.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- Projects -->
   <url>
-    <loc>https://whitebeard10.github.io/html/project.html</loc>
+    <loc>https://avinashchhetri.netlify.app/html/project.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -30,7 +30,7 @@
 
   <!-- Skills -->
   <url>
-    <loc>https://whitebeard10.github.io/html/skills.html</loc>
+    <loc>https://avinashchhetri.netlify.app/html/skills.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
   <!-- Resume -->
   <url>
-    <loc>https://whitebeard10.github.io/html/resume.html</loc>
+    <loc>https://avinashchhetri.netlify.app/html/resume.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
