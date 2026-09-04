@@ -1,5 +1,5 @@
 // =============================================
-// JARVIS UI — Main JavaScript
+// Portfolio interactions
 // =============================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -180,7 +180,7 @@ function initContactForm() {
 
     // Disable
     [...form.elements].forEach(el => el.disabled = true);
-    btn.innerHTML = '<i class="fas fa-satellite-dish"></i> TRANSMITTING...';
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Sending...';
 
     fetch('https://formspree.io/f/mblgoqny', {
       method: 'POST',
@@ -190,11 +190,9 @@ function initContactForm() {
       .then(res => res.json())
       .then(() => {
         form.innerHTML = `
-          <div style="padding:2rem; border:1px solid #00ff88; background:rgba(0,255,136,0.05); text-align:center;">
-            <div style="font-family:'Orbitron',sans-serif; font-size:0.7rem; letter-spacing:3px; color:#00ff88; margin-bottom:1rem;">
-              ◆ TRANSMISSION SUCCESSFUL ◆
-            </div>
-            <p style="font-family:'Rajdhani',sans-serif; color:rgba(180,230,255,0.7); font-size:1rem;">
+          <div class="contact-message success">
+            <div class="contact-message-title">Message received</div>
+            <p>
               Thank you, ${name}! Message received. I'll respond shortly.
             </p>
           </div>
@@ -202,11 +200,9 @@ function initContactForm() {
       })
       .catch(() => {
         form.innerHTML = `
-          <div style="padding:2rem; border:1px solid #ff4444; background:rgba(255,68,68,0.05); text-align:center;">
-            <div style="font-family:'Orbitron',sans-serif; font-size:0.7rem; letter-spacing:3px; color:#ff4444; margin-bottom:1rem;">
-              ◆ TRANSMISSION FAILED ◆
-            </div>
-            <p style="font-family:'Rajdhani',sans-serif; color:rgba(180,230,255,0.7); font-size:1rem;">
+          <div class="contact-message error">
+            <div class="contact-message-title">Something went wrong</div>
+            <p>
               Something went wrong. Please try again or email directly.
             </p>
           </div>
@@ -279,10 +275,10 @@ function initTypingEffect() {
   if (!statusEl) return;
 
   const messages = [
-    'SYSTEM ONLINE // PORTFOLIO v2.0',
-    'LOADING MODULES // PLEASE STANDBY',
-    'ALL SYSTEMS NOMINAL // READY',
-    'JARVIS INTERFACE // INITIALIZED'
+    'Available for thoughtful collaborations',
+    'Full-stack engineering & AI systems',
+    'Turning ambitious ideas into reliable software',
+    'Based in Noida, India'
   ];
 
   let msgIndex = 0;
